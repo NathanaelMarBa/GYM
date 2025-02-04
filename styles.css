@@ -1,0 +1,317 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #D91A60;
+}
+
+/* Header */
+header {
+    background: #fff;
+    color: #333;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #D91A60;
+    transition: transform 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #D91A60;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+nav {
+    display: flex; /* Por defecto, visible en pantallas grandes */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #F26BC3;
+}
+
+.texto-blanco {
+    color: white;
+}
+
+/* Hero section */
+.hero {
+    background: url('./Images/Portada.jpeg') no-repeat center center/cover;
+    color: #fff;
+    color: white; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero .container {
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.hero .btn {
+    background: #D91A60; /* Rosa oscuro */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    animation: bounce 2s infinite;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #BF0F4B; /* Rosa oscuro más intenso al hacer hover */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+/* Servicios */
+.services {
+    padding: 50px 0;
+    background: #fff; /* Fondo blanco */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #f4f4f4; /* Gris muy claro para las tarjetas */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra gris */
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    color: #D91A60;
+}
+
+/* Entrenadores */
+.trainers {
+    padding: 50px 0;
+    background: #fff; /* Fondo blanco */
+}
+
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.trainer-card {
+    text-align: center;
+    background: #f4f4f4; /* Gris muy claro para las tarjetas */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra gris */
+}
+
+.trainer-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.trainer-card h3 {
+    color: #D91A60;
+}
+
+/* Contacto */
+.contact {
+    padding: 50px 0;
+    background: #f4f4f4; /* Gris muy claro */
+    color: #333; /* Texto gris oscuro */
+}
+
+.contact h2 {
+    color: #D91A60; /* Rosa oscuro */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #fff; /* Fondo blanco para los campos */
+    color: #333; /* Texto gris oscuro */
+}
+
+.contact button {
+    background: #D91A60; /* Rosa oscuro */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact button:hover {
+    background: #BF0F4B; /* Rosa oscuro más intenso al hacer hover */
+}
+
+footer {
+    background: #D91A60; /* Rosa oscuro */
+    color: #fff;
+    padding: 40px 0; /* Aumenta el padding vertical */
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    justify-content: space-around; /* Distribuye las secciones equitativamente */
+    align-items: center; /* Centra verticalmente */
+    gap: 3rem; /* Espacio entre las secciones */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    justify-content: space-around; /* Distribuye las secciones equitativamente */
+    gap: 3rem; /* Espacio entre las secciones */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+}
+
+.footer-section {
+    text-align: center; /* Centra el texto en cada sección */
+    flex: 1 1 30%; /* Cada sección ocupa un tercio del ancho (aproximadamente) */
+    min-width: 200px; /* Ancho mínimo para evitar que se vean muy comprimidos */
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: white; /* Texto en blanco */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+}
+
+.footer-section p {
+    margin-bottom: 5px;
+    color: white; /* Texto en blanco */
+    font-size: 1em; /* Tamaño de fuente más grande */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    gap: 15px; /* Espacio entre iconos */
+}
+
+.social-icon {
+    color: white;
+    font-size: 2.5em; /* Tamaño de icono más grande */
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #F26BC3;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none; /* Ocultar por defecto en pantallas pequeñas */
+        width: 100%; /* Ocupar todo el ancho */
+    }
+
+    nav.active { /* Mostrar al hacer clic */
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+
+body.header-hidden header {
+    transform: translateY(-100%);
+}
